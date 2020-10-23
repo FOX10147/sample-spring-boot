@@ -6,10 +6,10 @@ LABEL version=1.0
 
 USER root
 
-ENV APP_LOC="/usr/src/app"
+ENV APP_LOC=/usr/src/app
 
 WORKDIR $APP_LOC
 
-COPY build/libs/app.jar $APP_LOC/app.jar
+COPY build/libs/app.jar /usr/src/app.jar
 
 ENTRYPOINT ["java","-jar","app.jar"]
